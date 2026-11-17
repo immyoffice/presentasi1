@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Club Presentation - Boas Sababang (251134146)</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- File CSS Eksternal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BAR NAVIGASI ATAS (AKSES BAHASA INDONESIA & KONTROL SLIDE) -->
+  <header class="top-navbar">
+    <div class="brand-info">
+      <span class="badge-nim">NIM: 251134146</span>
+      <span class="author-name">Boas Sababang</span>
+    </div>
+
+    <div class="nav-links">
+      <button class="slide-dot active" onclick="goToSlide(0)">Cover</button>
+      <button class="slide-dot" onclick="goToSlide(1)">1. Research Topic</button>
+      <button class="slide-dot" onclick="goToSlide(2)">2. Reflection</button>
+      <button class="slide-dot" onclick="goToSlide(3)">2b. Strategy & Video</button>
+      <button class="slide-dot" onclick="goToSlide(4)">3. Recommendation</button>
+    </div>
+
+    <div class="lang-controls">
+      <button id="btn-drawer-id" class="btn-top-id" onclick="toggleIdDrawer()">
+        <i class="fa-solid fa-language"></i> Terjemahan ID (Atas)
+      </button>
+      <div class="lang-switch" onclick="toggleLanguage()" title="Switch Presentation Language">
+        <span id="lang-en" class="active-lang">EN</span>
+        <span id="lang-id">ID</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PANEL TERJEMAHAN BAHASA INDONESIA DI ATAS LAYAR (TOP DRAWER) -->
+  <div id="id-top-drawer" class="id-drawer">
+    <div class="drawer-header">
+      <h4><i class="fa-solid fa-book-open"></i> Terjemahan Bahasa Indonesia (Slide Aktif)</h4>
+      <button class="close-drawer" onclick="toggleIdDrawer()"><i class="fa-solid fa-xmark"></i> Tutup</button>
+    </div>
+    <div id="drawer-body" class="drawer-content">
+      <!-- Konten terjemahan otomatis berubah mengikuti slide yang sedang dibuka -->
+    </div>
+  </div>
+
+  <!-- KONTAINER UTAMA SLIDE PRESENTASI -->
+  <main class="presentation-container">
+
+    <!-- ==================== SLIDE 0: COVER ==================== -->
+    <section class="slide active" data-index="0">
+      <div class="slide-card cover-layout">
+        <div class="cover-badge">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span data-en="ENGLISH CLUB PRESENTATION & REFLECTION" data-id="PRESENTASI & REFLEKSI ENGLISH CLUB">
+            ENGLISH CLUB PRESENTATION & REFLECTION
+          </span>
+        </div>
+
+        <h1 class="cover-title"
+            data-en="English Fluency for Elementary School Teachers & Self-Learning Strategies"
+            data-id="Kelancaran Bahasa Inggris bagi Guru SD & Strategi Belajar Mandiri">
+          English Fluency for Elementary School Teachers & Self-Learning Strategies
+        </h1>
+
+        <p class="cover-subtitle"
+           data-en="Exploring the importance of fluent English in primary education, personal learning reflections, subtitle-based shadowing strategies, and English Club recommendations."
+           data-id="Mengulas pentingnya kelancaran bahasa Inggris di pendidikan dasar, refleksi belajar pribadi, strategi shadowing berbasis subtitle, dan rekomendasi English Club.">
+          Exploring the importance of fluent English in primary education, personal learning reflections, subtitle-based shadowing strategies, and English Club recommendations.
+        </p>
+
+        <div class="presenter-box">
+          <div class="avatar-circle">BS</div>
+          <div class="presenter-meta">
+            <span class="label" data-en="Presented by:" data-id="Dipresentasikan oleh:">Presented by:</span>
+            <h2>Boas Sababang</h2>
+            <p class="nim-highlight">NIM: 251134146</p>
+          </div>
+        </div>
+
+        <div class="quick-agenda">
+          <div class="agenda-card" onclick="goToSlide(1)">
+            <span class="num">01</span>
+            <div>
+              <h4 data-en="Research Topic" data-id="Topik Penelitian">Research Topic</h4>
+              <p data-en="3 Main Reasons & Examples" data-id="3 Alasan Utama & Contoh">3 Main Reasons & Examples</p>
+            </div>
+          </div>
+          <div class="agenda-card" onclick="goToSlide(2)">
+            <span class="num">02</span>
+            <div>
+              <h4 data-en="Reflection & Strategy" data-id="Refleksi & Strategi">Reflection & Strategy</h4>
+              <p data-en="Daily Routine & YouTube Shadowing" data-id="Rutinitas & Shadowing YouTube">Daily Routine & YouTube Shadowing</p>
+            </div>
+          </div>
+          <div class="agenda-card" onclick="goToSlide(4)">
+            <span class="num">03</span>
+            <div>
+              <h4 data-en="Recommendation" data-id="Rekomendasi">Recommendation</h4>
+              <p data-en="English Club Impact for Juniors" data-id="Dampak English Club bagi Junior">English Club Impact for Juniors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 1: RESEARCH TOPIC ==================== -->
+    <section class="slide" data-index="1">
+      <div class="slide-card">
+        <div class="section-header">
+          <span class="section-tag">01 / RESEARCH TOPIC</span>
+          <h2 data-en="Should Elementary School Teachers Speak English Fluently?"
+              data-id="Apakah Guru SD Harus Bisa Berbicara Bahasa Inggris dengan Lancar?">
+            Should Elementary School Teachers Speak English Fluently?
+          </h2>
+          <p class="question-prompt"
+             data-en="Yes, elementary school teachers should speak English fluently for three main reasons:"
+             data-id="Ya, guru SD harus bisa berbahasa Inggris dengan lancar karena tiga alasan utama:">
+            Yes, elementary school teachers should speak English fluently for three main reasons:
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Reason 1 -->
+          <div class="feature-card">
+            <div class="icon-box blue"><i class="fa-solid fa-ear-listen"></i></div>
+            <h3 data-en="1. Accurate Foundation" data-id="1. Fondasi yang Tepat">1. Accurate Foundation</h3>
+            <p class="reason-desc"
+               data-en="Children imitate their teachers easily."
+               data-id="Anak-anak mudah meniru gurunya.">
+              Children imitate their teachers easily.
+            </p>
+            <div class="example-box">
+              <strong data-en="Example:" data-id="Contoh:">Example:</strong>
+              <span data-en='If a teacher pronounces daily instructions like "Line up, please" correctly, students will naturally build good pronunciation from a young age.'
+                    data-id='Jika guru mengucapkan instruksi harian seperti "Line up, please" dengan benar, siswa akan terbiasa memiliki pelafalan yang tepat sejak dini.'>
+                If a teacher pronounces daily instructions like "Line up, please" correctly, students will naturally build good pronunciation from a young age.
+              </span>
+            </div>
+          </div>
+
+          <!-- Reason 2 -->
+          <div class="feature-card">
+            <div class="icon-box cyan"><i class="fa-solid fa-globe"></i></div>
+            <h3 data-en="2. Global Learning Resources" data-id="2. Sumber Belajar Global">2. Global Learning Resources</h3>
+            <p class="reason-desc"
+               data-en="Teachers can access international teaching materials."
+               data-id="Guru dapat mengakses materi ajar internasional.">
+              Teachers can access international teaching materials.
+            </p>
+            <div class="example-box">
+              <strong data-en="Example:" data-id="Contoh:">Example:</strong>
+              <span data-en="A teacher can use interactive science videos or games from foreign websites to make classes more engaging."
+                    data-id="Guru bisa menggunakan video sains interaktif atau permainan dari situs luar negeri agar kelas lebih menarik.">
+                A teacher can use interactive science videos or games from foreign websites to make classes more engaging.
+              </span>
+            </div>
+          </div>
+
+          <!-- Reason 3 -->
+          <div class="feature-card">
+            <div class="icon-box indigo"><i class="fa-solid fa-comments"></i></div>
+            <h3 data-en="3. Habit Building" data-id="3. Membangun Kebiasaan">3. Habit Building</h3>
+            <p class="reason-desc"
+               data-en="Daily exposure removes the fear of learning a foreign language."
+               data-id="Paparan setiap hari menghilangkan rasa takut terhadap bahasa asing.">
+              Daily exposure removes the fear of learning a foreign language.
+            </p>
+            <div class="example-box">
+              <strong data-en="Example:" data-id="Contoh:">Example:</strong>
+              <span data-en="Greeting students in English every morning makes them treat English as a normal communication tool, not a scary exam subject."
+                    data-id="Menyapa siswa dengan bahasa Inggris setiap pagi membuat mereka menganggap bahasa Inggris sebagai alat komunikasi biasa, bukan mata pelajaran ujian yang menakutkan.">
+                Greeting students in English every morning makes them treat English as a normal communication tool, not a scary exam subject.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 2: REFLECTION (PART 1) ==================== -->
+    <section class="slide" data-index="2">
+      <div class="slide-card">
+        <div class="section-header">
+          <span class="section-tag">02 / PERSONAL REFLECTION</span>
+          <h2 data-en="Self-Reflection on Learning English"
+              data-id="Refleksi Diri dalam Belajar Bahasa Inggris">
+            Self-Reflection on Learning English
+          </h2>
+        </div>
+
+        <div class="grid-2x2">
+          <!-- Q1 -->
+          <div class="qa-card">
+            <div class="qa-header">
+              <i class="fa-solid fa-chart-line"></i>
+              <h4 data-en="How well do you understand English?" data-id="Seberapa baik Anda memahami bahasa Inggris?">
+                How well do you understand English?
+              </h4>
+            </div>
+            <p data-en="I am at an intermediate level. I can understand daily conversations, main ideas in articles, and movies with English subtitles, though I am still improving my active speaking skills."
+               data-id="Saya berada di tingkat menengah (intermediate). Saya bisa memahami percakapan sehari-hari, inti artikel, dan film dengan subtitle bahasa Inggris, meskipun saya masih terus melatih kelancaran berbicara aktif saya.">
+              I am at an intermediate level. I can understand daily conversations, main ideas in articles, and movies with English subtitles, though I am still improving my active speaking skills.
+            </p>
+          </div>
+
+          <!-- Q2 -->
+          <div class="qa-card">
+            <div class="qa-header">
+              <i class="fa-solid fa-calendar-check"></i>
+              <h4 data-en="How do you learn English on a daily basis?" data-id="Bagaimana cara Anda belajar bahasa Inggris dalam keseharian?">
+                How do you learn English on a daily basis?
+              </h4>
+            </div>
+            <p data-en="I integrate English into my daily routine by watching English content on YouTube, listening to podcasts or music, and setting my phone's language to English."
+               data-id="Saya memasukkan bahasa Inggris ke dalam rutinitas harian dengan menonton konten berbahasa Inggris di YouTube, mendengarkan podcast atau musik, serta mengatur bahasa di ponsel saya ke bahasa Inggris.">
+              I integrate English into my daily routine by watching English content on YouTube, listening to podcasts or music, and setting my phone's language to English.
+            </p>
+          </div>
+
+          <!-- Q3 -->
+          <div class="qa-card">
+            <div class="qa-header">
+              <i class="fa-solid fa-heart"></i>
+              <h4 data-en="Which part of learning English do you like most? Why?" data-id="Bagian mana dari belajar bahasa Inggris yang paling Anda sukai? Mengapa?">
+                Which part of learning English do you like most? Why?
+              </h4>
+            </div>
+            <p data-en="I like listening and vocabulary enrichment the most because I can learn naturally through movies and songs, allowing me to understand real-life expressions without feeling stressed."
+               data-id="Saya paling menyukai bagian mendengarkan (listening) dan memperkaya kosakata karena saya bisa belajar secara alami lewat film dan lagu, sehingga saya paham ungkapan sehari-hari tanpa merasa tertekan.">
+              I like listening and vocabulary enrichment the most because I can learn naturally through movies and songs, allowing me to understand real-life expressions without feeling stressed.
+            </p>
+          </div>
+
+          <!-- Q4 -->
+          <div class="qa-card warning-border">
+            <div class="qa-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <h4 data-en="What has made your learning more difficult?" data-id="Hal apa yang membuat proses belajar Anda menjadi lebih sulit?">
+                What has made your learning more difficult?
+              </h4>
+            </div>
+            <p data-en="My biggest challenges are overthinking grammar rules when speaking and the lack of an English-speaking environment for daily practice."
+               data-id="Tantangan terbesar saya adalah terlalu memikirkan aturan grammar saat hendak berbicara dan kurangnya lingkungan berbahasa Inggris untuk latihan sehari-hari.">
+              My biggest challenges are overthinking grammar rules when speaking and the lack of an English-speaking environment for daily practice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 3: STRATEGY FOCUS & YOUTUBE PLAYER ==================== -->
+    <section class="slide" data-index="3">
+      <div class="slide-card">
+        <div class="section-header">
+          <span class="section-tag">02B / CORE LEARNING STRATEGY & SUBTITLE STUDIO</span>
+          <h2 data-en="Overcoming Challenges: Shadowing & Subtitle Strategy"
+              data-id="Mengatasi Tantangan: Strategi Shadowing & Belajar dari Subtitle">
+            Overcoming Challenges: Shadowing & Subtitle Strategy
+          </h2>
+        </div>
+
+        <div class="strategy-layout">
+          <!-- Kolom Kiri: Penjelasan Strategi -->
+          <div class="strategy-info">
+            <div class="strategy-highlight-box">
+              <h3 data-en="What strategies have you tried to make your learning easier?"
+                  data-id="Strategi apa yang sudah Anda coba untuk membuat proses belajar Anda menjadi lebih mudah?">
+                What strategies have you tried to make your learning easier?
+              </h3>
+              <p class="strategy-answer"
+                 data-en="I practice the shadowing technique by repeating sentences from native speakers in videos, and I focus on delivering my message first rather than worrying about perfect grammar."
+                 data-id="Saya mempraktikkan teknik shadowing dengan menirukan kalimat penutur asli dari video, serta fokus pada penyampaian pesan terlebih dahulu daripada mengkhawatirkan grammar yang sempurna.">
+                I practice the shadowing technique by repeating sentences from native speakers in videos, and I focus on delivering my message first rather than worrying about perfect grammar.
+              </p>
+            </div>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <span class="step-badge">1</span>
+                <div>
+                  <strong data-en="Watch with English Subtitles (CC)" data-id="Tonton dengan Subtitle Bahasa Inggris (CC)">Watch with English Subtitles (CC)</strong>
+                  <p data-en="Connect how words are written with how native speakers pronounce them in real context."
+                     data-id="Menghubungkan cara penulisan kata dengan pelafalan asli penutur dalam konteks nyata.">
+                    Connect how words are written with how native speakers pronounce them in real context.
+                  </p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-badge">2</span>
+                <div>
+                  <strong data-en="Shadowing (Repeat Immediately)" data-id="Shadowing (Tirukan Langsung)">Shadowing (Repeat Immediately)</strong>
+                  <p data-en="Imitate the intonation, rhythm, and pronunciation directly from the video subtitles."
+                     data-id="Menirukan intonasi, ritme, dan pelafalan secara langsung dari subtitle video.">
+                    Imitate the intonation, rhythm, and pronunciation directly from the video subtitles.
+                  </p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-badge">3</span>
+                <div>
+                  <strong data-en="Message Over Grammar Perfection" data-id="Utamakan Pesan di Atas Kesempurnaan Grammar">Message Over Grammar Perfection</strong>
+                  <p data-en="Build speaking confidence first without freezing over complex grammar rules."
+                     data-id="Membangun kepercayaan diri berbicara terlebih dahulu tanpa kaku memikirkan rumus grammar.">
+                    Build speaking confidence first without freezing over complex grammar rules.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Pemutar Video YouTube & Input Link Kustom -->
+          <div class="youtube-studio">
+            <div class="video-controls-top">
+              <div class="preset-buttons">
+                <button class="preset-btn active" onclick="loadPresetVideo('wMwN94BSPWM', this)">
+                  <i class="fa-brands fa-youtube"></i> Shadowing Story (CC)
+                </button>
+                <button class="preset-btn" onclick="loadPresetVideo('MrrxN6GZJaU', this)">
+                  <i class="fa-solid fa-podcast"></i> Daily Conversation
+                </button>
+                <button class="preset-btn" onclick="loadPresetVideo('G1PnQBEImqU', this)">
+                  <i class="fa-solid fa-microphone-lines"></i> Slow Shadowing
+                </button>
+              </div>
+
+              <div class="custom-url-bar">
+                <input type="text" id="yt-url-input" placeholder="Paste any YouTube URL or Video ID here..." />
+                <button onclick="loadCustomYouTube()">
+                  <i class="fa-solid fa-play"></i> <span data-en="Play Video" data-id="Putar Video">Play Video</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Iframe YouTube dengan Subtitle Otomatis (cc_load_policy=1) -->
+            <div class="video-wrapper">
+              <iframe
+                id="youtube-player"
+                src="https://www.youtube.com/embed/wMwN94BSPWM?cc_load_policy=1&cc_lang_pref=en&rel=0"
+                title="YouTube Learning with Subtitles"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="subtitle-caption-bar">
+              <span><i class="fa-solid fa-closed-captioning"></i> <strong data-en="Practice Line:" data-id="Kalimat Latihan:">Practice Line:</strong> "Line up, please! Let's learn together step by step."</span>
+              <a id="yt-external-link" href="https://www.youtube.com/watch?v=wMwN94BSPWM" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-up-right-from-square"></i> <span data-en="Open on YouTube" data-id="Buka di YouTube">Open on YouTube</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 4: RECOMMENDATION ==================== -->
+    <section class="slide" data-index="4">
+      <div class="slide-card">
+        <div class="section-header">
+          <span class="section-tag">03 / RECOMMENDATION</span>
+          <h2 data-en="English Club Evaluation & Recommendation"
+              data-id="Evaluasi & Rekomendasi English Club">
+            English Club Evaluation & Recommendation
+          </h2>
+        </div>
+
+        <div class="rec-grid">
+          <div class="rec-box">
+            <div class="rec-badge"><i class="fa-solid fa-users-rays"></i></div>
+            <h3 data-en="What do you think about this English Club?"
+                data-id="Apa pendapat Anda tentang English Club ini?">
+              What do you think about this English Club?
+            </h3>
+            <p data-en="This English Club is a very supportive and practical platform. It gives us a safe space to practice speaking and share ideas without the pressure of academic grades."
+               data-id="English Club ini adalah wadah yang sangat suportif dan praktis. Klub ini memberi kita ruang aman untuk berlatih berbicara dan bertukar ide tanpa tekanan nilai akademik.">
+              This English Club is a very supportive and practical platform. It gives us a safe space to practice speaking and share ideas without the pressure of academic grades.
+            </p>
+          </div>
+
+          <div class="rec-box highlight">
+            <div class="rec-badge"><i class="fa-solid fa-thumbs-up"></i></div>
+            <h3 data-en="Do you recommend your juniors to attend this English Club? Why or why not?"
+                data-id="Apakah Anda merekomendasikan adik tingkat (junior) Anda untuk mengikuti English Club ini? Mengapa?">
+              Do you recommend your juniors to attend this English Club? Why or why not?
+            </h3>
+            <p data-en="Yes, I highly recommend it. Language fluency requires consistent practice, and joining this club early will help juniors build self-confidence, expand their network, and improve their public speaking skills."
+               data-id="Ya, saya sangat merekomendasikannya. Kelancaran berbahasa membutuhkan latihan rutin, dan bergabung lebih awal akan membantu adik tingkat membangun kepercayaan diri, memperluas relasi, serta mengasah kemampuan public speaking mereka.">
+              Yes, I highly recommend it. Language fluency requires consistent practice, and joining this club early will help juniors build self-confidence, expand their network, and improve their public speaking skills.
+            </p>
+
+            <div class="pillar-pills">
+              <span><i class="fa-solid fa-bolt"></i> <strong data-en="Self-Confidence" data-id="Kepercayaan Diri">Self-Confidence</strong></span>
+              <span><i class="fa-solid fa-network-wired"></i> <strong data-en="Expand Network" data-id="Perluas Relasi">Expand Network</strong></span>
+              <span><i class="fa-solid fa-microphone"></i> <strong data-en="Public Speaking" data-id="Public Speaking">Public Speaking</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- KONTROL NAVIGASI BAWAH (PREV / NEXT SLIDE) -->
+  <footer class="bottom-controls">
+    <button id="prev-btn" class="ctrl-btn" onclick="changeSlide(-1)">
+      <i class="fa-solid fa-arrow-left"></i> <span data-en="Previous" data-id="Sebelumnya">Previous</span>
+    </button>
+
+    <div class="slide-progress">
+      <span id="slide-indicator">Slide 1 / 5</span>
+      <div class="progress-bar-bg">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+
+    <button id="next-btn" class="ctrl-btn primary" onclick="changeSlide(1)">
+      <span data-en="Next" data-id="Selanjutnya">Next</span> <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </footer>
+
+  <!-- File JavaScript Eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
